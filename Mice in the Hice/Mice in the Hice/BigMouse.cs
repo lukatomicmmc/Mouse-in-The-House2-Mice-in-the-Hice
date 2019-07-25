@@ -10,26 +10,38 @@ namespace Mice_in_the_Hice
     class BigMouse
     {
         // declare fields to use in the class
-        int x, y, width, height;//variables for the rectangle
-        public Image BigMouseImage;//variable for the planet's image
-
-        public Rectangle BigMouseRec;//variable for a rectangle to place our image in
+        public int x, y, width, height;//variables for the rectangle
+        public Image bigmouseImage;//variable for the bigmouse's image
+        public Rectangle bigmouseRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public BigMouse()
+        public BigMouse(int spacing)
         {
             x = 10;
-            y = 10;
-            width = 40;
-            height = 40;
-            BigMouseImage = Image.FromFile("BigMouse1.png");
-            BigMouseRec = new Rectangle(x, y, width, height);
+            y = spacing;
+            width = 35;
+            height = 35;
+            bigmouseImage = Image.FromFile("BigMouse1.png");
+            bigmouseRec = new Rectangle(x, y, width, height);
         }
         // Methods for the BigMouse class
         public void drawBigMouse(Graphics g)
         {
-            g.DrawImage(BigMouseImage, BigMouseRec);
+            bigmouseRec = new Rectangle(x, y, width, height);
+            g.DrawImage(bigmouseImage, bigmouseRec);
         }
+        public void moveBigMouse()
+        {
+
+            bigmouseRec.Location = new Point(x, y);
+            if (bigmouseRec.Location.X > 750)
+            {
+                x = -20;
+                bigmouseRec.Location = new Point(x, y);
+            }
+
+        }
+
 
 
     }
