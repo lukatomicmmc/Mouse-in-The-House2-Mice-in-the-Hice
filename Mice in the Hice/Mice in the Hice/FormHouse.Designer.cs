@@ -32,6 +32,7 @@
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrBigMouse = new System.Windows.Forms.Timer(this.components);
             this.tmrSmallMouse = new System.Windows.Forms.Timer(this.components);
+            this.tmrSparkles = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlGame
@@ -53,6 +54,11 @@
             this.tmrSmallMouse.Enabled = true;
             this.tmrSmallMouse.Tick += new System.EventHandler(this.tmrSmallMouse_Tick);
             // 
+            // tmrSparkles
+            // 
+            this.tmrSparkles.Enabled = true;
+            this.tmrSparkles.Tick += new System.EventHandler(this.tmrSparkles_Tick);
+            // 
             // FormHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -61,10 +67,13 @@
             this.ClientSize = new System.Drawing.Size(984, 535);
             this.Controls.Add(this.pnlGame);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.Name = "FormHouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The House";
             this.Load += new System.EventHandler(this.FormHouse_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHouse_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormHouse_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -74,6 +83,7 @@
         private System.Windows.Forms.Panel pnlGame;
         private System.Windows.Forms.Timer tmrBigMouse;
         private System.Windows.Forms.Timer tmrSmallMouse;
+        private System.Windows.Forms.Timer tmrSparkles;
     }
 }
 
