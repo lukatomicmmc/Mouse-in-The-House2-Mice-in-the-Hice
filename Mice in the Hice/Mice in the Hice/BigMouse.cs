@@ -13,7 +13,7 @@ namespace Mice_in_the_Hice
         public int x, y, width, height;//variables for the rectangle
         public Image bigmouseImage;//variable for the bigmouse's image
         public Rectangle bigmouseRec;//variable for a rectangle to place our image in
-        public int score;
+        public int score, scorelvl, lives;
         //Create a constructor (initialises the values of the fields)
         public BigMouse(int spacing)
         {
@@ -36,10 +36,10 @@ namespace Mice_in_the_Hice
             bigmouseRec.Location = new Point(x, y);
             if (bigmouseRec.Location.X > 750)
             {
+                score += 1;
                 x = -20;
                 bigmouseRec.Location = new Point(x, y);
             }
-
         }
 
 

@@ -12,9 +12,8 @@ namespace Mice_in_the_Hice
         // declare fields to use in the class
         public int x, y, width, height;//variables for the rectangle
         public Image smallmouseImage;//variable for the smallmouse's image
-
         public Rectangle smallmouseRec;//variable for a rectangle to place our image in
-        public int score;
+        public int score, scorelvl, lives;
         //Create a constructor (initialises the values of the fields)
         public SmallMouse()
         {
@@ -38,9 +37,10 @@ namespace Mice_in_the_Hice
             smallmouseRec.Location = new Point(x, y);
             if (smallmouseRec.Location.X > 750)
             {
+                lives -= 1;
                 x = -20;
                 Random ydistance = new Random();
-                y = ydistance.Next(10, 435);
+                y = ydistance.Next(10, 400);
                 smallmouseRec.Location = new Point(x, y);
             }
 

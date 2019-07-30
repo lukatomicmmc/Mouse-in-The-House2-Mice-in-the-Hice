@@ -17,11 +17,12 @@ namespace Mice_in_the_Hice
         // declare space for an array of 7 objects called BigMouse 
         BigMouse[] bigmouse = new BigMouse[7];
         Sparkles sparkles = new Sparkles();
-        Random xspeed = new Random();
         SmallMouse smallmouse = new SmallMouse(); //create the object, smallmouse1
+        Random xspeed = new Random();
         bool left, right, up, down;
         string move;
-
+        int score, lives, speed;
+        int scorelvl = 0;
 
         public FormHouse()
         {
@@ -32,14 +33,25 @@ namespace Mice_in_the_Hice
                 int y = 10 + (i * 75);
                 bigmouse[i] = new BigMouse(y);
             }
+            
 
         }
 
+        private void checkLives()
+        {
+            if (lives == 0)
+            {
+                tmrMice.Enabled = false;
+                tmrSparkles.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
 
 
         private void FormHouse_Load(object sender, EventArgs e)
         {
-
+            lives = 5;
         }
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)
@@ -49,7 +61,7 @@ namespace Mice_in_the_Hice
             for (int i = 0; i < 7; i++)
             {
                 // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = xspeed.Next(5, 20);
+                int rndmspeed = xspeed.Next(5, 25) + scorelvl;
                 bigmouse[i].x += rndmspeed;
 
                 //call the BigMouse class's drawBigMouse method to draw the images
@@ -64,10 +76,35 @@ namespace Mice_in_the_Hice
 
         private void tmrBigMouse_Tick(object sender, EventArgs e)
         {
+            
+        }
+
+        private void tmrMice_Tick(object sender, EventArgs e)
+        {
+            score = 0;
             for (int i = 0; i < 7; i++)
             {
                 bigmouse[i].moveBigMouse();
+                if (sparkles.sparklesRec.IntersectsWith(bigmouse[i].bigmouseRec))
+                {
+                    //reset bigmouse[i] back to left of panel
+                    bigmouse[i].x = -20; // set  x value of bigmouseRec
+                    lives -= 1;// lose a life
+                    lblLives.Text = lives.ToString();// display number of lives
+                    checkLives();
+                }
+
+                score += bigmouse[i].score;// get score from BigMouse class (in moveBigMouse method)
+                lblScore.Text = score.ToString();// display score
+
             }
+            pnlGame.Invalidate();//makes the paint event fire to redraw the panel
+            if (score > scorelvl * scorelvl)
+            {
+                scorelvl += 1;
+            }
+            lblScoreLvl.Text = scorelvl.ToString();
+            smallmouse.moveSmallMouse();
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 
@@ -99,8 +136,7 @@ namespace Mice_in_the_Hice
 
         private void tmrSmallMouse_Tick(object sender, EventArgs e)
         {
-            smallmouse.moveSmallMouse();
-            pnlGame.Invalidate();//makes the paint event fire to redraw the panel
+            
         }
 
         private void FormHouse_KeyDown(object sender, KeyEventArgs e)
