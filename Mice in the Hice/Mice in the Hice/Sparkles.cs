@@ -21,9 +21,9 @@ namespace Mice_in_the_Hice
         {
             x = 600;
             y = 200;
-            width = 40;
-            height = 40;
-            sparkles = Image.FromFile("Sparkles1.png");
+            width = 60;
+            height = 60;
+            sparkles = Image.FromFile("Sparkles.gif");
             sparklesRec = new Rectangle(x, y, width, height);
         }
         //methods
