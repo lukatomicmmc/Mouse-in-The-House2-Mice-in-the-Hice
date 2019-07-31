@@ -23,6 +23,7 @@ namespace Mice_in_the_Hice
         string move;
         int score, lives, speed;
         int scorelvl = 0;
+        int x, y;
 
         public FormHouse()
         {
@@ -81,10 +82,14 @@ namespace Mice_in_the_Hice
 
         private void tmrMice_Tick(object sender, EventArgs e)
         {
-            score = 0;
             for (int i = 0; i < 7; i++)
             {
                 bigmouse[i].moveBigMouse();
+                if (bigmouse[i].bigmouseRec.Location.X > 750)
+                {
+                    score += 1;
+                    bigmouse[i].x = -20;
+                }
                 if (sparkles.sparklesRec.IntersectsWith(bigmouse[i].bigmouseRec))
                 {
                     //reset bigmouse[i] back to left of panel
@@ -95,16 +100,34 @@ namespace Mice_in_the_Hice
                 }
 
                 score += bigmouse[i].score;// get score from BigMouse class (in moveBigMouse method)
-                lblScore.Text = score.ToString();// display score
 
             }
+            if (sparkles.sparklesRec.IntersectsWith(smallmouse.smallmouseRec))
+            {
+                //reset smallmouse back to left of panel
+                Random ydistance = new Random();
+                smallmouse.y = ydistance.Next(10, 400);
+                smallmouse.x = -20;
+                score += 1;// increase score
+            }
+            if (smallmouse.smallmouseRec.Location.X > 750)
+            {
+                lives -= 1;
+                smallmouse.x = -20;
+                Random ydistance = new Random();
+                smallmouse.y = ydistance.Next(10, 400);
+                checkLives();
+            }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
+            lblLives.Text = lives.ToString();
             if (score > scorelvl * scorelvl)
             {
                 scorelvl += 1;
+                lives += 1;
             }
             lblScoreLvl.Text = scorelvl.ToString();
             smallmouse.moveSmallMouse();
+            lblScore.Text = score.ToString();// display score
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 

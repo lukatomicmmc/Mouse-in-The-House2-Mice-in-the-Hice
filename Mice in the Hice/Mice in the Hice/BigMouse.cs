@@ -34,12 +34,7 @@ namespace Mice_in_the_Hice
         {
 
             bigmouseRec.Location = new Point(x, y);
-            if (bigmouseRec.Location.X > 750)
-            {
-                score += 1;
-                x = -20;
-                bigmouseRec.Location = new Point(x, y);
-            }
+            
         }
 
 

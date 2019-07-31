@@ -35,14 +35,7 @@ namespace Mice_in_the_Hice
         {
             x+=10;
             smallmouseRec.Location = new Point(x, y);
-            if (smallmouseRec.Location.X > 750)
-            {
-                lives -= 1;
-                x = -20;
-                Random ydistance = new Random();
-                y = ydistance.Next(10, 400);
-                smallmouseRec.Location = new Point(x, y);
-            }
+            
 
         }
 
