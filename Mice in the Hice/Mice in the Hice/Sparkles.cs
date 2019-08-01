@@ -12,8 +12,9 @@ namespace Mice_in_the_Hice
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image sprite_cat;//variable for the cat's image
-        public Rectangle sparklesRec; //variable for a rectangle to place our image in
+        Image[] images = new Image[15];
+        public Rectangle sparklesRec;//variable for a rectangle to place our image in
+        Animation animate; // create an animation object called animate
 
 
         //Create a constructor (initialises the values of the fields)
@@ -24,11 +25,21 @@ namespace Mice_in_the_Hice
             width = 55;
             height = 30;
 
+            //load the images that will make up the animated character into the images array
+            for (int i = 1; i <= 14; i++)
+            {
+                images[i] = Image.FromFile(@"sprite_cat" + i.ToString() + ".png");
+            }
+            //pass the images array to the Animation class's constructor
+            animate = new Animation(images);
+
         }
         //methods
         public void drawSparkles(Graphics g)
         {
-            g.DrawImage(sprite_cat, sparklesRec);
+            sparklesRec = new Rectangle(x, y, width, height);
+            //draw animated image
+            g.DrawImage(animate.GetNextImage(), sparklesRec);
         }
         public void moveSparkles(string move)
         {

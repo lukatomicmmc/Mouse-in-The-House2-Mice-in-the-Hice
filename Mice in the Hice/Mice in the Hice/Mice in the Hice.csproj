@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation.cs" />
     <Compile Include="BigMouse.cs" />
     <Compile Include="FormHouse.cs">
       <SubType>Form</SubType>

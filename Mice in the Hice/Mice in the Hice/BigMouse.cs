@@ -11,24 +11,33 @@ namespace Mice_in_the_Hice
     {
         // declare fields to use in the class
         public int x, y, width, height;//variables for the rectangle
-        public Image bigmouseImage;//variable for the bigmouse's image
+        Image[] images = new Image[10];
         public Rectangle bigmouseRec;//variable for a rectangle to place our image in
+        Animation animate; // create an animation object called animate
         public int score, scorelvl, lives;
         //Create a constructor (initialises the values of the fields)
         public BigMouse(int spacing)
         {
             x = 10;
             y = spacing;
-            width = 35;
-            height = 35;
-            bigmouseImage = Image.FromFile("BigMouse1.png");
-            bigmouseRec = new Rectangle(x, y, width, height);
+            width = 55;
+            height = 42;
+
+
+            //load the images that will make up the animated character into the images array
+            for (int i = 1; i <= 9; i++)
+            {
+                images[i] = Image.FromFile(@"sprite_buff" + i.ToString() + ".png");
+            }
+            //pass the images array to the Animation class's constructor
+            animate = new Animation(images);
         }
         // Methods for the BigMouse class
         public void drawBigMouse(Graphics g)
         {
             bigmouseRec = new Rectangle(x, y, width, height);
-            g.DrawImage(bigmouseImage, bigmouseRec);
+            //draw animated image
+            g.DrawImage(animate.GetNextImage(), bigmouseRec);
         }
         public void moveBigMouse()
         {
