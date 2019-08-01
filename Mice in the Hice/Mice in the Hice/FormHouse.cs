@@ -24,6 +24,9 @@ namespace Mice_in_the_Hice
         int score, lives, speed;
         int scorelvl = 0;
         int x, y;
+        Image[] catimages = new Image[15];
+        int catcount;
+        Image sprite_cat1;
 
         public FormHouse()
         {
@@ -53,6 +56,12 @@ namespace Mice_in_the_Hice
         private void FormHouse_Load(object sender, EventArgs e)
         {
             lives = 5;
+            for (int i = 1; i <= 14; i++)
+            {
+                catimages[i] = Image.FromFile(Application.StartupPath + @"\sprite_cat" + i.ToString() + ".png");
+            }
+            sprite_cat1 = catimages[1];
+
         }
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)
@@ -72,6 +81,18 @@ namespace Mice_in_the_Hice
             smallmouse.drawSmallMouse(g);
             sparkles.drawSparkles(g);
 
+
+        }
+
+        private void tmrAnim_Tick(object sender, EventArgs e)
+        {
+            //we cycle through each element of the images array creating the animation
+            sprite_cat1 = catimages[catcount];
+            catcount++;
+            if (catcount > 14)
+                catcount = 1;
+
+            Invalidate();   //refreshes screen otherwise image won't change
 
         }
 

@@ -35,14 +35,15 @@
             this.tmrSmallMouse = new System.Windows.Forms.Timer(this.components);
             this.tmrSparkles = new System.Windows.Forms.Timer(this.components);
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblLivesName = new System.Windows.Forms.Label();
-            this.lblLives = new System.Windows.Forms.Label();
-            this.lblScoreLvlName = new System.Windows.Forms.Label();
-            this.lblScoreName = new System.Windows.Forms.Label();
-            this.lblScoreLvl = new System.Windows.Forms.Label();
-            this.lblScore = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblScoreLvl = new System.Windows.Forms.Label();
+            this.lblScoreName = new System.Windows.Forms.Label();
+            this.lblScoreLvlName = new System.Windows.Forms.Label();
+            this.lblLives = new System.Windows.Forms.Label();
+            this.lblLivesName = new System.Windows.Forms.Label();
             this.tmrMice = new System.Windows.Forms.Timer(this.components);
+            this.tmrAnim = new System.Windows.Forms.Timer(this.components);
             this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,70 +86,13 @@
             this.pnlLogo.Size = new System.Drawing.Size(960, 499);
             this.pnlLogo.TabIndex = 1;
             // 
-            // lblLivesName
+            // txtName
             // 
-            this.lblLivesName.BackColor = System.Drawing.Color.White;
-            this.lblLivesName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLivesName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLivesName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblLivesName.Location = new System.Drawing.Point(746, 208);
-            this.lblLivesName.Name = "lblLivesName";
-            this.lblLivesName.Size = new System.Drawing.Size(94, 46);
-            this.lblLivesName.TabIndex = 1;
-            this.lblLivesName.Text = "Lives";
-            this.lblLivesName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLives
-            // 
-            this.lblLives.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.lblLives.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLives.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLives.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblLives.Location = new System.Drawing.Point(857, 208);
-            this.lblLives.Name = "lblLives";
-            this.lblLives.Size = new System.Drawing.Size(79, 46);
-            this.lblLives.TabIndex = 10;
-            this.lblLives.Text = "5";
-            this.lblLives.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScoreLvlName
-            // 
-            this.lblScoreLvlName.BackColor = System.Drawing.Color.White;
-            this.lblScoreLvlName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblScoreLvlName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreLvlName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScoreLvlName.Location = new System.Drawing.Point(746, 285);
-            this.lblScoreLvlName.Name = "lblScoreLvlName";
-            this.lblScoreLvlName.Size = new System.Drawing.Size(94, 46);
-            this.lblScoreLvlName.TabIndex = 5;
-            this.lblScoreLvlName.Text = "Level";
-            this.lblScoreLvlName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScoreName
-            // 
-            this.lblScoreName.BackColor = System.Drawing.Color.White;
-            this.lblScoreName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblScoreName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScoreName.Location = new System.Drawing.Point(746, 369);
-            this.lblScoreName.Name = "lblScoreName";
-            this.lblScoreName.Size = new System.Drawing.Size(94, 46);
-            this.lblScoreName.TabIndex = 6;
-            this.lblScoreName.Text = "Score";
-            this.lblScoreName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScoreLvl
-            // 
-            this.lblScoreLvl.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.lblScoreLvl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblScoreLvl.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreLvl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScoreLvl.Location = new System.Drawing.Point(857, 285);
-            this.lblScoreLvl.Name = "lblScoreLvl";
-            this.lblScoreLvl.Size = new System.Drawing.Size(79, 46);
-            this.lblScoreLvl.TabIndex = 20;
-            this.lblScoreLvl.Text = "0";
-            this.lblScoreLvl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(746, 110);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(190, 20);
+            this.txtName.TabIndex = 10;
             // 
             // lblScore
             // 
@@ -163,18 +107,81 @@
             this.lblScore.Text = "0";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtName
+            // lblScoreLvl
             // 
-            this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(746, 110);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(190, 20);
-            this.txtName.TabIndex = 10;
+            this.lblScoreLvl.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lblScoreLvl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScoreLvl.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreLvl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblScoreLvl.Location = new System.Drawing.Point(857, 285);
+            this.lblScoreLvl.Name = "lblScoreLvl";
+            this.lblScoreLvl.Size = new System.Drawing.Size(79, 46);
+            this.lblScoreLvl.TabIndex = 20;
+            this.lblScoreLvl.Text = "0";
+            this.lblScoreLvl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScoreName
+            // 
+            this.lblScoreName.BackColor = System.Drawing.Color.White;
+            this.lblScoreName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScoreName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblScoreName.Location = new System.Drawing.Point(746, 369);
+            this.lblScoreName.Name = "lblScoreName";
+            this.lblScoreName.Size = new System.Drawing.Size(94, 46);
+            this.lblScoreName.TabIndex = 6;
+            this.lblScoreName.Text = "Score";
+            this.lblScoreName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScoreLvlName
+            // 
+            this.lblScoreLvlName.BackColor = System.Drawing.Color.White;
+            this.lblScoreLvlName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScoreLvlName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreLvlName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblScoreLvlName.Location = new System.Drawing.Point(746, 285);
+            this.lblScoreLvlName.Name = "lblScoreLvlName";
+            this.lblScoreLvlName.Size = new System.Drawing.Size(94, 46);
+            this.lblScoreLvlName.TabIndex = 5;
+            this.lblScoreLvlName.Text = "Level";
+            this.lblScoreLvlName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLives
+            // 
+            this.lblLives.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lblLives.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLives.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLives.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLives.Location = new System.Drawing.Point(857, 208);
+            this.lblLives.Name = "lblLives";
+            this.lblLives.Size = new System.Drawing.Size(79, 46);
+            this.lblLives.TabIndex = 10;
+            this.lblLives.Text = "5";
+            this.lblLives.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLivesName
+            // 
+            this.lblLivesName.BackColor = System.Drawing.Color.White;
+            this.lblLivesName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLivesName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLivesName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLivesName.Location = new System.Drawing.Point(746, 208);
+            this.lblLivesName.Name = "lblLivesName";
+            this.lblLivesName.Size = new System.Drawing.Size(94, 46);
+            this.lblLivesName.TabIndex = 1;
+            this.lblLivesName.Text = "Lives";
+            this.lblLivesName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tmrMice
             // 
             this.tmrMice.Enabled = true;
             this.tmrMice.Tick += new System.EventHandler(this.tmrMice_Tick);
+            // 
+            // tmrAnim
+            // 
+            this.tmrAnim.Enabled = true;
+            this.tmrAnim.Interval = 10;
+            this.tmrAnim.Tick += new System.EventHandler(this.tmrAnim_Tick);
             // 
             // FormHouse
             // 
@@ -213,6 +220,7 @@
         private System.Windows.Forms.Label lblScoreLvlName;
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Timer tmrMice;
+        private System.Windows.Forms.Timer tmrAnim;
     }
 }
 

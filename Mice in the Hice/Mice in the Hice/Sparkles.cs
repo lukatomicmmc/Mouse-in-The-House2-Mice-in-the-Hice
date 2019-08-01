@@ -12,7 +12,7 @@ namespace Mice_in_the_Hice
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image sparkles;//variable for the cat's image
+        public Image sprite_cat;//variable for the cat's image
         public Rectangle sparklesRec; //variable for a rectangle to place our image in
 
 
@@ -21,16 +21,14 @@ namespace Mice_in_the_Hice
         {
             x = 600;
             y = 200;
-            width = 60;
-            height = 60;
-            sparkles = Image.FromFile("Sparkles.gif");
-            sparklesRec = new Rectangle(x, y, width, height);
+            width = 55;
+            height = 30;
+
         }
         //methods
         public void drawSparkles(Graphics g)
         {
-
-            g.DrawImage(sparkles, sparklesRec);
+            g.DrawImage(sprite_cat, sparklesRec);
         }
         public void moveSparkles(string move)
         {
