@@ -44,15 +44,14 @@
             this.lblLivesName = new System.Windows.Forms.Label();
             this.tmrMice = new System.Windows.Forms.Timer(this.components);
             this.tmrAnim = new System.Windows.Forms.Timer(this.components);
-            this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGame
             // 
             this.pnlGame.BackColor = System.Drawing.Color.PapayaWhip;
-            this.pnlGame.Location = new System.Drawing.Point(12, 105);
+            this.pnlGame.Location = new System.Drawing.Point(12, 116);
             this.pnlGame.Name = "pnlGame";
-            this.pnlGame.Size = new System.Drawing.Size(731, 426);
+            this.pnlGame.Size = new System.Drawing.Size(960, 553);
             this.pnlGame.TabIndex = 0;
             this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
             // 
@@ -74,24 +73,17 @@
             // pnlLogo
             // 
             this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
-            this.pnlLogo.Controls.Add(this.txtName);
-            this.pnlLogo.Controls.Add(this.lblScore);
-            this.pnlLogo.Controls.Add(this.lblScoreLvl);
-            this.pnlLogo.Controls.Add(this.lblScoreName);
-            this.pnlLogo.Controls.Add(this.lblScoreLvlName);
-            this.pnlLogo.Controls.Add(this.lblLives);
-            this.pnlLogo.Controls.Add(this.lblLivesName);
             this.pnlLogo.Location = new System.Drawing.Point(12, 7);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(960, 499);
+            this.pnlLogo.Size = new System.Drawing.Size(1166, 103);
             this.pnlLogo.TabIndex = 1;
             // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(746, 110);
+            this.txtName.Location = new System.Drawing.Point(1000, 143);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(190, 20);
+            this.txtName.Size = new System.Drawing.Size(213, 20);
             this.txtName.TabIndex = 10;
             // 
             // lblScore
@@ -100,7 +92,7 @@
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScore.Location = new System.Drawing.Point(857, 369);
+            this.lblScore.Location = new System.Drawing.Point(1134, 432);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(79, 46);
             this.lblScore.TabIndex = 30;
@@ -113,7 +105,7 @@
             this.lblScoreLvl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScoreLvl.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreLvl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScoreLvl.Location = new System.Drawing.Point(857, 285);
+            this.lblScoreLvl.Location = new System.Drawing.Point(1134, 356);
             this.lblScoreLvl.Name = "lblScoreLvl";
             this.lblScoreLvl.Size = new System.Drawing.Size(79, 46);
             this.lblScoreLvl.TabIndex = 20;
@@ -126,7 +118,7 @@
             this.lblScoreName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScoreName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScoreName.Location = new System.Drawing.Point(746, 369);
+            this.lblScoreName.Location = new System.Drawing.Point(1000, 432);
             this.lblScoreName.Name = "lblScoreName";
             this.lblScoreName.Size = new System.Drawing.Size(94, 46);
             this.lblScoreName.TabIndex = 6;
@@ -139,7 +131,7 @@
             this.lblScoreLvlName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScoreLvlName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreLvlName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScoreLvlName.Location = new System.Drawing.Point(746, 285);
+            this.lblScoreLvlName.Location = new System.Drawing.Point(1000, 356);
             this.lblScoreLvlName.Name = "lblScoreLvlName";
             this.lblScoreLvlName.Size = new System.Drawing.Size(94, 46);
             this.lblScoreLvlName.TabIndex = 5;
@@ -152,7 +144,7 @@
             this.lblLives.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblLives.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLives.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblLives.Location = new System.Drawing.Point(857, 208);
+            this.lblLives.Location = new System.Drawing.Point(1134, 245);
             this.lblLives.Name = "lblLives";
             this.lblLives.Size = new System.Drawing.Size(79, 46);
             this.lblLives.TabIndex = 10;
@@ -165,7 +157,7 @@
             this.lblLivesName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblLivesName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLivesName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblLivesName.Location = new System.Drawing.Point(746, 208);
+            this.lblLivesName.Location = new System.Drawing.Point(1000, 245);
             this.lblLivesName.Name = "lblLivesName";
             this.lblLivesName.Size = new System.Drawing.Size(94, 46);
             this.lblLivesName.TabIndex = 1;
@@ -188,9 +180,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(984, 535);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblScoreName);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblScoreLvl);
+            this.Controls.Add(this.lblScoreLvlName);
             this.Controls.Add(this.pnlGame);
             this.Controls.Add(this.pnlLogo);
+            this.Controls.Add(this.lblLives);
+            this.Controls.Add(this.lblLivesName);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.Name = "FormHouse";
@@ -199,9 +198,8 @@
             this.Load += new System.EventHandler(this.FormHouse_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHouse_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormHouse_KeyUp);
-            this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

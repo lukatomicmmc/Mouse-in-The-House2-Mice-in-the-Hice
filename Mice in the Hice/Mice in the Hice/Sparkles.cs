@@ -20,10 +20,10 @@ namespace Mice_in_the_Hice
         //Create a constructor (initialises the values of the fields)
         public Sparkles()
         {
-            x = 600;
-            y = 200;
-            width = 55;
-            height = 30;
+            x = 800;
+            y = 250;
+            width = 82;
+            height = 45;
 
             //load the images that will make up the animated character into the images array
             for (int i = 1; i <= 14; i++)
@@ -47,10 +47,10 @@ namespace Mice_in_the_Hice
 
             if (move == "right")
             {
-                if (sparklesRec.Location.X > 700) // is spaceship close to right side
+                if (sparklesRec.Location.X > 960) // is spaceship close to right side
                 {
 
-                    x = 700;
+                    x = 960;
                     sparklesRec.Location = new Point(x, y);
                 }
                 else
@@ -78,10 +78,10 @@ namespace Mice_in_the_Hice
             }
             if (move == "down")
             {
-                if (sparklesRec.Location.Y > 400) // is spaceship close to right side
+                if (sparklesRec.Location.Y > 560) // is spaceship close to right side
                 {
 
-                    y = 400;
+                    y = 560;
                     sparklesRec.Location = new Point(x, y);
                 }
                 else

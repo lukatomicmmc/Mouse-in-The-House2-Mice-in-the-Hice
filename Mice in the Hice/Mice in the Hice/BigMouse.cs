@@ -20,8 +20,8 @@ namespace Mice_in_the_Hice
         {
             x = 10;
             y = spacing;
-            width = 55;
-            height = 42;
+            width = 82;
+            height = 63;
 
 
             //load the images that will make up the animated character into the images array

@@ -97,7 +97,7 @@ namespace Mice_in_the_Hice
             for (int i = 0; i < 7; i++)
             {
                 bigmouse[i].moveBigMouse();
-                if (bigmouse[i].bigmouseRec.Location.X > 750)
+                if (bigmouse[i].bigmouseRec.Location.X > 1000)
                 {
                     score += 1;
                     bigmouse[i].x = -20;
@@ -118,16 +118,16 @@ namespace Mice_in_the_Hice
             {
                 //reset smallmouse back to left of panel
                 Random ydistance = new Random();
-                smallmouse.y = ydistance.Next(10, 400);
+                smallmouse.y = ydistance.Next(10, 500);
                 smallmouse.x = -20;
                 score += 1;// increase score
             }
-            if (smallmouse.smallmouseRec.Location.X > 750)
+            if (smallmouse.smallmouseRec.Location.X > 1000)
             {
                 lives -= 1;
                 smallmouse.x = -20;
                 Random ydistance = new Random();
-                smallmouse.y = ydistance.Next(10, 400);
+                smallmouse.y = ydistance.Next(10, 500);
                 checkLives();
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
