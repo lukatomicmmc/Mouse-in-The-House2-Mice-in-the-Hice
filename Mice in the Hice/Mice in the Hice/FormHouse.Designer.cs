@@ -75,7 +75,7 @@
             this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
             this.pnlLogo.Location = new System.Drawing.Point(12, 7);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(1166, 103);
+            this.pnlLogo.Size = new System.Drawing.Size(1166, 101);
             this.pnlLogo.TabIndex = 1;
             // 
             // txtName

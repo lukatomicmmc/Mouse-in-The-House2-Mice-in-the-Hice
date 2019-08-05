@@ -15,14 +15,15 @@ namespace Mice_in_the_Hice
     {
         Graphics g; //declare a graphics object called g
         // declare space for an array of 7 objects called BigMouse 
-        BigMouse[] bigmouse = new BigMouse[7];
+        BigMouse[] bigmouse = new BigMouse[6];
         Sparkles sparkles = new Sparkles();
-        SmallMouse smallmouse = new SmallMouse(); //create the object, smallmouse1
+        SmallMouse smallmouse = new SmallMouse();
+        Rug rug = new Rug();
         Random xspeed = new Random();
         bool left, right, up, down;
         string move;
         int score, lives, speed;
-        int scorelvl = 0;
+        public int scorelvl = 0;
         int x, y;
         //images array for animating
         Image[] images = new Image[15];
@@ -33,14 +34,15 @@ namespace Mice_in_the_Hice
         {
             InitializeComponent();
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlGame, new object[] { true });
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
-                int y = 10 + (i * 75);
+                int y = 0 + (i * 100);
                 bigmouse[i] = new BigMouse(y);
             }
             
 
         }
+
 
         private void checkLives()
         {
@@ -71,11 +73,13 @@ namespace Mice_in_the_Hice
         {
             //get the graphics used to paint on the panel control
             g = e.Graphics;
-            for (int i = 0; i < 7; i++)
+            rug.drawRug(g);
+            for (int i = 0; i < 6; i++)
             {
                 // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = xspeed.Next(5, 25) + scorelvl;
-                bigmouse[i].x += rndmspeed;
+                int rndmspeed = xspeed.Next(5, 25);
+                speed = rndmspeed + 2 * scorelvl;
+                bigmouse[i].x += speed;
 
                 //call the BigMouse class's drawBigMouse method to draw the images
                 bigmouse[i].drawBigMouse(g);
@@ -94,7 +98,7 @@ namespace Mice_in_the_Hice
 
         private void tmrMice_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 bigmouse[i].moveBigMouse();
                 if (bigmouse[i].bigmouseRec.Location.X > 1000)
@@ -118,7 +122,7 @@ namespace Mice_in_the_Hice
             {
                 //reset smallmouse back to left of panel
                 Random ydistance = new Random();
-                smallmouse.y = ydistance.Next(10, 500);
+                smallmouse.y = ydistance.Next(50, 450);
                 smallmouse.x = -20;
                 score += 1;// increase score
             }
@@ -127,7 +131,7 @@ namespace Mice_in_the_Hice
                 lives -= 1;
                 smallmouse.x = -20;
                 Random ydistance = new Random();
-                smallmouse.y = ydistance.Next(10, 500);
+                smallmouse.y = ydistance.Next(50, 450);
                 checkLives();
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
