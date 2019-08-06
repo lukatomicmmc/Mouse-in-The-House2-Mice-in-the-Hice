@@ -184,7 +184,12 @@ namespace Mice_in_the_Hice
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
             if (e.KeyData == Keys.Down) { down = true; }
-
+            if (e.KeyData == Keys.Escape)
+            {
+                FormMenu menu = new FormMenu();
+                this.Close();
+                menu.Show();
+            }
         }
 
         private void FormHouse_KeyUp(object sender, KeyEventArgs e)

@@ -16,7 +16,8 @@ namespace Mice_in_the_Hice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormHouse());
+            new FormMenu().Show();
+            Application.Run();
         }
     }
 }

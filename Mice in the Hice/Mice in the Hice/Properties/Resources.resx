@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,166 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BigMouse1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\BigMouse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logosmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\logosmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\lore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menulogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\menulogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\menuscreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mice_in_the_Hice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Mice in the Hice.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mice_in_the_Hice1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Mice in the Hice.pdb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mice_in_the_Hice_exe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Mice in the Hice.exe.config;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sparkles1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Sparkles1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_buff9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_buff9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cat9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_cat9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_jerry8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_jerry8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_rug7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\sprite_rug7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="titlescreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\titlescreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -16,5 +16,17 @@ namespace Mice_in_the_Hice
         {
             InitializeComponent();
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            FormHouse house = new FormHouse();
+            this.Close();
+            house.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

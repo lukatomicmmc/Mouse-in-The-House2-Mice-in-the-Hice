@@ -78,7 +78,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\Mice in the Hice.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,6 +93,159 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\BigMouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logosmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Mice in the Hice.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Mice in the Hice.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Sparkles1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_buff9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_cat14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_jerry8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sprite_rug7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\titlescreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\menuscreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\menulogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\lore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
