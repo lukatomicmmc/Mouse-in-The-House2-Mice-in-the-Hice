@@ -28,6 +28,7 @@ namespace Mice_in_the_Hice
         //images array for animating
         Image[] images = new Image[15];
         Animation animate;
+        int death;
 
 
         public FormHouse()
@@ -50,8 +51,10 @@ namespace Mice_in_the_Hice
             {
                 tmrMice.Enabled = false;
                 tmrSparkles.Enabled = false;
-                MessageBox.Show("Game Over");
-
+                tmrAnim.Enabled = false;
+                FormDeath death = new FormDeath();
+                this.Close();
+                death.Show();
             }
         }
 
@@ -59,7 +62,10 @@ namespace Mice_in_the_Hice
         private void FormHouse_Load(object sender, EventArgs e)
         {
             lives = 5;
-            
+            death = 0;
+
+            lblLives.Text = FormMenu.valueForName;
+
         }
 
         

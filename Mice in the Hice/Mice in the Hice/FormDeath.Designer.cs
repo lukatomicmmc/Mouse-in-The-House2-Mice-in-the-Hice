@@ -30,20 +30,37 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDeath));
             this.pnlDog = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.lblDead = new System.Windows.Forms.Label();
-            this.txtDead = new System.Windows.Forms.TextBox();
+            this.btnRetry = new System.Windows.Forms.Button();
             this.pnlDog.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDog
             // 
             this.pnlDog.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDog.BackgroundImage")));
-            this.pnlDog.Controls.Add(this.txtDead);
+            this.pnlDog.Controls.Add(this.btnRetry);
+            this.pnlDog.Controls.Add(this.btnMenu);
             this.pnlDog.Controls.Add(this.lblDead);
             this.pnlDog.Location = new System.Drawing.Point(0, 0);
             this.pnlDog.Name = "pnlDog";
             this.pnlDog.Size = new System.Drawing.Size(1276, 692);
             this.pnlDog.TabIndex = 0;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Location = new System.Drawing.Point(628, 529);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(346, 57);
+            this.btnMenu.TabIndex = 8;
+            this.btnMenu.Text = "BACK TO MAIN MENU";
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // lblDead
             // 
@@ -51,17 +68,26 @@
             this.lblDead.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDead.Location = new System.Drawing.Point(586, 73);
             this.lblDead.Name = "lblDead";
-            this.lblDead.Size = new System.Drawing.Size(473, 246);
+            this.lblDead.Size = new System.Drawing.Size(470, 248);
             this.lblDead.TabIndex = 1;
+            this.lblDead.Text = "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggguub" +
+    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb";
             this.lblDead.Click += new System.EventHandler(this.lblDead_Click);
             // 
-            // txtDead
+            // btnRetry
             // 
-            this.txtDead.Location = new System.Drawing.Point(594, 81);
-            this.txtDead.Name = "txtDead";
-            this.txtDead.ReadOnly = true;
-            this.txtDead.Size = new System.Drawing.Size(100, 20);
-            this.txtDead.TabIndex = 2;
+            this.btnRetry.BackColor = System.Drawing.Color.Transparent;
+            this.btnRetry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetry.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRetry.Image = ((System.Drawing.Image)(resources.GetObject("btnRetry.Image")));
+            this.btnRetry.Location = new System.Drawing.Point(628, 434);
+            this.btnRetry.Name = "btnRetry";
+            this.btnRetry.Size = new System.Drawing.Size(346, 57);
+            this.btnRetry.TabIndex = 9;
+            this.btnRetry.Text = "TRY AGAIN";
+            this.btnRetry.UseVisualStyleBackColor = false;
+            this.btnRetry.Click += new System.EventHandler(this.btnRetry_Click);
             // 
             // FormDeath
             // 
@@ -73,7 +99,6 @@
             this.Name = "FormDeath";
             this.Text = "FormDeath";
             this.pnlDog.ResumeLayout(false);
-            this.pnlDog.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +107,7 @@
 
         private System.Windows.Forms.Panel pnlDog;
         private System.Windows.Forms.Label lblDead;
-        private System.Windows.Forms.TextBox txtDead;
+        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnRetry;
     }
 }
