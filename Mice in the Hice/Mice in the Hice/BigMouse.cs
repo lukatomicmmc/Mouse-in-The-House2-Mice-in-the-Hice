@@ -18,7 +18,6 @@ namespace Mice_in_the_Hice
         //Create a constructor (initialises the values of the fields)
         public BigMouse(int spacing)
         {
-            x = 10;
             y = spacing;
             width = 82;
             height = 63;

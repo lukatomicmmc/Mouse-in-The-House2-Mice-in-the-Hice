@@ -15,7 +15,7 @@ namespace Mice_in_the_Hice
         private void btnPlay_Click(object sender, EventArgs e)
         {
             valueForAge = btnAge.Text;
-             valueForName = txtName.Text;
+            valueForName = txtName.Text;
 
 
         FormHouse house = new FormHouse();

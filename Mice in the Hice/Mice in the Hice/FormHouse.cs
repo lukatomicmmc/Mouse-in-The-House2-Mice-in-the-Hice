@@ -22,6 +22,7 @@ namespace Mice_in_the_Hice
         Random xspeed = new Random();
         bool left, right, up, down;
         string move;
+        public int finalscore;
         int score, lives, speed;
         public int scorelvl = 0;
         int x, y;
@@ -49,6 +50,7 @@ namespace Mice_in_the_Hice
         {
             if (lives == 0)
             {
+                score = finalscore;
                 tmrMice.Enabled = false;
                 tmrSparkles.Enabled = false;
                 tmrAnim.Enabled = false;
@@ -64,7 +66,8 @@ namespace Mice_in_the_Hice
             lives = 5;
             death = 0;
 
-            lblLives.Text = FormMenu.valueForName;
+            txtName.Text = FormMenu.valueForName;
+            txtAge.Text = FormMenu.valueForAge;
 
         }
 

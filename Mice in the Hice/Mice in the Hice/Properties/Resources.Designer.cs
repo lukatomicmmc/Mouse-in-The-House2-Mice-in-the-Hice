@@ -63,29 +63,9 @@ namespace Mice_in_the_Hice.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BigMouse1 {
+        internal static System.Drawing.Bitmap deadmice {
             get {
-                object obj = ResourceManager.GetObject("BigMouse1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap deathscreen {
-            get {
-                object obj = ResourceManager.GetObject("deathscreen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo1 {
-            get {
-                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                object obj = ResourceManager.GetObject("deadmice", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -161,16 +141,6 @@ namespace Mice_in_the_Hice.Properties {
             get {
                 object obj = ResourceManager.GetObject("Mice_in_the_Hice1", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Sparkles1 {
-            get {
-                object obj = ResourceManager.GetObject("Sparkles1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -550,16 +520,6 @@ namespace Mice_in_the_Hice.Properties {
         internal static System.Drawing.Bitmap sprite_rug7 {
             get {
                 object obj = ResourceManager.GetObject("sprite_rug7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap titlescreen {
-            get {
-                object obj = ResourceManager.GetObject("titlescreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

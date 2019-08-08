@@ -44,5 +44,17 @@ namespace Mice_in_the_Hice
             this.Close();
             house.Show();
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormDeath_Load(object sender, EventArgs e)
+        {
+            txtName.Text = FormMenu.valueForName;
+            txtAge.Text = FormMenu.valueForAge;
+            lblScore.Text = FormHouse.finalscore;
+        }
     }
 }

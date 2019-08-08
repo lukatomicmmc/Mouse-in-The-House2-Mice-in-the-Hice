@@ -104,12 +104,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\BigMouse1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\logosmall.png" />
   </ItemGroup>
   <ItemGroup>
@@ -117,9 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Mice in the Hice.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Sparkles1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\sprite_buff1.png" />
@@ -236,31 +227,16 @@
     <None Include="bin\Debug\sprite_rug7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\titlescreen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\menuscreen.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\menulogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\lore.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\deathscreen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\menu button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\deadmice.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
