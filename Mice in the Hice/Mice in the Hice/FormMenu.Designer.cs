@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.t = new System.Windows.Forms.Panel();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnAge = new System.Windows.Forms.NumericUpDown();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnLore = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlMenuLogo = new System.Windows.Forms.Panel();
-            this.btnAge = new System.Windows.Forms.NumericUpDown();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
             this.t.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAge)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,72 @@
             this.t.Size = new System.Drawing.Size(1276, 719);
             this.t.TabIndex = 0;
             this.t.Paint += new System.Windows.Forms.PaintEventHandler(this.t_Paint);
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
+            this.lblAge.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(946, 317);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(39, 23);
+            this.lblAge.TabIndex = 11;
+            this.lblAge.Text = "Age";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(691, 317);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(55, 23);
+            this.lblName.TabIndex = 10;
+            this.lblName.Text = "Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.PeachPuff;
+            this.txtName.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(695, 347);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(249, 33);
+            this.txtName.TabIndex = 8;
+            this.txtName.Text = "Sparkles";
+            // 
+            // btnAge
+            // 
+            this.btnAge.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnAge.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAge.Location = new System.Drawing.Point(950, 347);
+            this.btnAge.Maximum = new decimal(new int[] {
+            123,
+            0,
+            0,
+            0});
+            this.btnAge.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.btnAge.Name = "btnAge";
+            this.btnAge.Size = new System.Drawing.Size(91, 33);
+            this.btnAge.TabIndex = 7;
+            this.btnAge.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.btnAge.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // btnPlay
             // 
@@ -130,72 +196,6 @@
             this.pnlMenuLogo.Size = new System.Drawing.Size(346, 243);
             this.pnlMenuLogo.TabIndex = 0;
             // 
-            // btnAge
-            // 
-            this.btnAge.BackColor = System.Drawing.Color.PeachPuff;
-            this.btnAge.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAge.Location = new System.Drawing.Point(950, 347);
-            this.btnAge.Maximum = new decimal(new int[] {
-            123,
-            0,
-            0,
-            0});
-            this.btnAge.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.btnAge.Name = "btnAge";
-            this.btnAge.Size = new System.Drawing.Size(91, 33);
-            this.btnAge.TabIndex = 7;
-            this.btnAge.Value = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.btnAge.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.PeachPuff;
-            this.txtName.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(695, 347);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(249, 33);
-            this.txtName.TabIndex = 8;
-            this.txtName.Text = "Sparkles";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(691, 317);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 23);
-            this.lblName.TabIndex = 10;
-            this.lblName.Text = "Name";
-            // 
-            // lblAge
-            // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.BackColor = System.Drawing.Color.Transparent;
-            this.lblAge.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(946, 317);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(39, 23);
-            this.lblAge.TabIndex = 11;
-            this.lblAge.Text = "Age";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +205,7 @@
             this.Controls.Add(this.t);
             this.Name = "FormMenu";
             this.Text = "FormMenu";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.t.ResumeLayout(false);
             this.t.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAge)).EndInit();

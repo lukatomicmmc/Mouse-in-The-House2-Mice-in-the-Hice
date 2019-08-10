@@ -22,8 +22,8 @@ namespace Mice_in_the_Hice
         Random xspeed = new Random();
         bool left, right, up, down;
         string move;
-        public int finalscore;
-        int score, lives, speed;
+        public static string finalscore;
+        public int score, lives, speed;
         public int scorelvl = 0;
         int x, y;
         //images array for animating
@@ -50,7 +50,11 @@ namespace Mice_in_the_Hice
         {
             if (lives == 0)
             {
-                score = finalscore;
+                finalscore = lblScore.Text;
+                if (score > FormMenu.highscore)
+                {
+                    score = FormMenu.highscore;
+                }
                 tmrMice.Enabled = false;
                 tmrSparkles.Enabled = false;
                 tmrAnim.Enabled = false;
