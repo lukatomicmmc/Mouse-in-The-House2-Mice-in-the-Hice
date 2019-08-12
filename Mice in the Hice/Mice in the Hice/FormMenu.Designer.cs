@@ -103,6 +103,8 @@
             this.txtName.Size = new System.Drawing.Size(249, 33);
             this.txtName.TabIndex = 8;
             this.txtName.Text = "Sparkles";
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // btnAge
             // 
@@ -157,6 +159,7 @@
             this.btnHelp.TabIndex = 5;
             this.btnHelp.Text = "HELP";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnLore
             // 
@@ -171,6 +174,7 @@
             this.btnLore.TabIndex = 4;
             this.btnLore.Text = "LORE";
             this.btnLore.UseVisualStyleBackColor = false;
+            this.btnLore.Click += new System.EventHandler(this.btnLore_Click);
             // 
             // btnExit
             // 
