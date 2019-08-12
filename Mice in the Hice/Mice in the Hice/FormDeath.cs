@@ -19,18 +19,44 @@ namespace Mice_in_the_Hice
             InitializeComponent();
             Random deadtext = new Random();
             int text;
-            text = deadtext.Next(1, 5);
+            text = deadtext.Next(1, 9);
             {
-                lblDead.Text = "I'm a mouse. And you've been... MOUSED!";
-                lblDead.Text = "The Mice are now in the Hice!";
-                lblDead.Text = FormMenu.valueForName + " has been captured by the mice. Instead of killing you, the mice decided to make you their chef. Years pass and you become a friend to the Mice. You become one of them. 4 years later, you feel chest pain while making dinner. You know your time has come too. The mice hold a big funeral.  All of your mice friends are there to commend him. Even your cat friends are there. " + FormMenu.valueForName + " would've been happy to see this";
-                lblDead.Text = "Guys, I don't want to get political or anything, but is " + FormMenu.valueForName + " dead?";
-                lblDead.Text = "Don't ask who Joe is. Please don't do it. Don't ask who Joe is. Also, " + FormMenu.valueForName + " is dead.";
-                lblDead.Text = "Now you can finally go back to playing Sonic Forces on your Nintendo Switch. You can make your own Sonic and play on the GO!";
-                lblDead.Text = "Is it clown week again? Because what you just did is a clown move.";
-                lblDead.Text = FormMenu.valueForName + " had a bruh moment.";
-                lblDead.Text = FormMenu.valueForName + " needs a chug jug";
-                lblDead.Text = "Ljudi, zaboravio sam engleski, upomoc! Takodje, " + FormMenu.valueForName + "je mrtav.";
+                if (text > 0)
+                {
+                    lblDead.Text = "I'm a mouse. And you've been... MOUSED!";
+                }
+                if (text > 1)
+                {
+                    lblDead.Text = "The Mice are now in the Hice!";
+                }
+                if (text > 2)
+                {
+                    lblDead.Text = "Ljudi, zaboravio sam engleski, upomoc! Takodje, " + FormMenu.valueForName + " je mrtav.";
+                }
+                if (text > 3)
+                {
+                    lblDead.Text = "Guys, I don't want to get political or anything, but is " + FormMenu.valueForName + " dead?";
+                }
+                if (text > 4)
+                {
+                    lblDead.Text = "Don't ask who Joe is. Please don't do it. Don't ask who Joe is. Also, " + FormMenu.valueForName + " is dead.";
+                }
+                if (text > 5)
+                {
+                    lblDead.Text = "Now you can finally go back to playing Sonic Forces on your Nintendo Switch. You can make your own Sonic and play on the GO!";
+                }
+                if (text > 6)
+                {
+                    lblDead.Text = "Is it clown week again? Because what you just did is a clown move.";
+                }
+                if (text > 7)
+                {
+                    lblDead.Text = FormMenu.valueForName + " had a bruh moment.";
+                }
+                if (text > 8)
+                {
+                    lblDead.Text = FormMenu.valueForName + " needs a chug jug.";
+                }
             }
 
         }
@@ -65,9 +91,10 @@ namespace Mice_in_the_Hice
 
         private void FormDeath_Load(object sender, EventArgs e)
         {
-            txtName.Text = FormMenu.valueForName;
-            txtAge.Text = FormMenu.valueForAge;
+            lblName.Text = FormMenu.valueForName;
+            lblAge.Text = FormMenu.valueForAge;
             lblScore.Text = FormHouse.finalscore.ToString();
+            lblScoreLvl.Text = FormHouse.finalscorelvl.ToString();
         }
     }
 }

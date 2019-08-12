@@ -7,11 +7,9 @@ namespace Mice_in_the_Hice
     {
         public static string valueForAge = "testAge";
         public static string valueForName = "testName";
-        public int highscore;
         public FormMenu()
         {
             InitializeComponent();
-            highscore = 0;
         }
 
         private void btnPlay_Click(object sender, EventArgs e)

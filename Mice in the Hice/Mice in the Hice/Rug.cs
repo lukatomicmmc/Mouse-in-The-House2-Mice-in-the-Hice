@@ -10,7 +10,7 @@ namespace Mice_in_the_Hice
     class Rug
     {
         public int x, y, width, height;//variables for the rectangle
-        Image[] images = new Image[8];
+        Image[] images = new Image[21];
         public Rectangle rugRec;//variable for a rectangle to place our image in
         Animation animate; // create an animation object called animate
         //Create a constructor (initialises the values of the fields)
@@ -21,9 +21,9 @@ namespace Mice_in_the_Hice
             width = 960;
             height = 553;
             //load the images that will make up the animated character into the images array
-            for (int i = 1; i <= 7; i++)
+            for (int i = 1; i <= 20; i++)
             {
-                images[i] = Image.FromFile(@"sprite_rug" + i.ToString() + ".png");
+                images[i] = Image.FromFile(@"sprite_floor" + i.ToString() + ".png");
             }
             //pass the images array to the Animation class's constructor
             animate = new Animation(images);
