@@ -41,7 +41,8 @@ namespace Mice_in_the_Hice
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            System.Media.SoundPlayer music = new System.Media.SoundPlayer("music-looping-section.wav");
+            music.PlayLooping();
         }
 
         private void btnLore_Click(object sender, EventArgs e)

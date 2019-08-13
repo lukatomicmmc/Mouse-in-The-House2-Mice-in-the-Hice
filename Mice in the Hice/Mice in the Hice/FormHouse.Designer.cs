@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHouse));
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrBigMouse = new System.Windows.Forms.Timer(this.components);
             this.tmrSmallMouse = new System.Windows.Forms.Timer(this.components);
             this.tmrSparkles = new System.Windows.Forms.Timer(this.components);
-            this.pnlLogo = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblScoreLvl = new System.Windows.Forms.Label();
@@ -46,6 +44,9 @@
             this.tmrAnim = new System.Windows.Forms.Timer(this.components);
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtAgeName = new System.Windows.Forms.TextBox();
+            this.lblPause = new System.Windows.Forms.Label();
+            this.lblRetry = new System.Windows.Forms.Label();
+            this.lblMenu = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -71,14 +72,6 @@
             // 
             this.tmrSparkles.Enabled = true;
             this.tmrSparkles.Tick += new System.EventHandler(this.tmrSparkles_Tick);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
-            this.pnlLogo.Location = new System.Drawing.Point(12, 7);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(1166, 101);
-            this.pnlLogo.TabIndex = 1;
             // 
             // txtName
             // 
@@ -200,6 +193,39 @@
             this.txtAgeName.TabIndex = 34;
             this.txtAgeName.Text = "Age";
             // 
+            // lblPause
+            // 
+            this.lblPause.BackColor = System.Drawing.Color.Transparent;
+            this.lblPause.Font = new System.Drawing.Font("Impact", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPause.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblPause.Location = new System.Drawing.Point(12, -8);
+            this.lblPause.Name = "lblPause";
+            this.lblPause.Size = new System.Drawing.Size(359, 105);
+            this.lblPause.TabIndex = 35;
+            this.lblPause.Click += new System.EventHandler(this.lblPause_Click);
+            // 
+            // lblRetry
+            // 
+            this.lblRetry.BackColor = System.Drawing.Color.Transparent;
+            this.lblRetry.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetry.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblRetry.Location = new System.Drawing.Point(422, 9);
+            this.lblRetry.Name = "lblRetry";
+            this.lblRetry.Size = new System.Drawing.Size(166, 36);
+            this.lblRetry.TabIndex = 36;
+            this.lblRetry.Click += new System.EventHandler(this.lblRetry_Click);
+            // 
+            // lblMenu
+            // 
+            this.lblMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblMenu.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblMenu.Location = new System.Drawing.Point(422, 65);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(166, 36);
+            this.lblMenu.TabIndex = 37;
+            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
+            // 
             // FormHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +233,9 @@
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.lblMenu);
+            this.Controls.Add(this.lblRetry);
+            this.Controls.Add(this.lblPause);
             this.Controls.Add(this.txtAgeName);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.lblScoreName);
@@ -215,7 +244,6 @@
             this.Controls.Add(this.lblScoreLvl);
             this.Controls.Add(this.lblScoreLvlName);
             this.Controls.Add(this.pnlGame);
-            this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.lblLivesName);
             this.DoubleBuffered = true;
@@ -237,7 +265,6 @@
         private System.Windows.Forms.Timer tmrBigMouse;
         private System.Windows.Forms.Timer tmrSmallMouse;
         private System.Windows.Forms.Timer tmrSparkles;
-        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblLivesName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblScore;
@@ -249,6 +276,9 @@
         private System.Windows.Forms.Timer tmrAnim;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtAgeName;
+        private System.Windows.Forms.Label lblPause;
+        private System.Windows.Forms.Label lblRetry;
+        private System.Windows.Forms.Label lblMenu;
     }
 }
 

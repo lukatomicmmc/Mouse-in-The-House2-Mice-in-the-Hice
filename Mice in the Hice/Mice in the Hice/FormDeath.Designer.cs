@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDeath));
             this.pnlDog = new System.Windows.Forms.Panel();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblAgeName = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblScoreLvlName = new System.Windows.Forms.Label();
             this.lblScoreName = new System.Windows.Forms.Label();
             this.lblScoreLvl = new System.Windows.Forms.Label();
@@ -37,9 +40,6 @@
             this.btnRetry = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.lblDead = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblAgeName = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
             this.pnlDog.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,44 @@
             this.pnlDog.Name = "pnlDog";
             this.pnlDog.Size = new System.Drawing.Size(1276, 692);
             this.pnlDog.TabIndex = 0;
+            // 
+            // lblAge
+            // 
+            this.lblAge.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lblAge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAge.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAge.Location = new System.Drawing.Point(720, 368);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(79, 38);
+            this.lblAge.TabIndex = 29;
+            this.lblAge.Text = "0";
+            this.lblAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAgeName
+            // 
+            this.lblAgeName.BackColor = System.Drawing.Color.White;
+            this.lblAgeName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAgeName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAgeName.Location = new System.Drawing.Point(573, 368);
+            this.lblAgeName.Name = "lblAgeName";
+            this.lblAgeName.Size = new System.Drawing.Size(129, 38);
+            this.lblAgeName.TabIndex = 28;
+            this.lblAgeName.Text = "Age";
+            this.lblAgeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblName.Location = new System.Drawing.Point(573, 320);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(226, 38);
+            this.lblName.TabIndex = 26;
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScoreLvlName
             // 
@@ -152,44 +190,6 @@
             this.lblDead.Size = new System.Drawing.Size(483, 248);
             this.lblDead.TabIndex = 1;
             this.lblDead.Click += new System.EventHandler(this.lblDead_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.White;
-            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblName.Location = new System.Drawing.Point(573, 320);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(226, 38);
-            this.lblName.TabIndex = 26;
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAgeName
-            // 
-            this.lblAgeName.BackColor = System.Drawing.Color.White;
-            this.lblAgeName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAgeName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAgeName.Location = new System.Drawing.Point(573, 368);
-            this.lblAgeName.Name = "lblAgeName";
-            this.lblAgeName.Size = new System.Drawing.Size(129, 38);
-            this.lblAgeName.TabIndex = 28;
-            this.lblAgeName.Text = "Age";
-            this.lblAgeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAge
-            // 
-            this.lblAge.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.lblAge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAge.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAge.Location = new System.Drawing.Point(720, 368);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(79, 38);
-            this.lblAge.TabIndex = 29;
-            this.lblAge.Text = "0";
-            this.lblAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormDeath
             // 

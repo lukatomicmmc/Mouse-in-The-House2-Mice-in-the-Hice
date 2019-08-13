@@ -31,6 +31,7 @@ namespace Mice_in_the_Hice
         Image[] images = new Image[15];
         Animation animate;
         int death;
+        int pause;
 
 
         public FormHouse()
@@ -66,6 +67,7 @@ namespace Mice_in_the_Hice
         private void FormHouse_Load(object sender, EventArgs e)
         {
             lives = 5;
+            pause = 1;
             death = 0;
 
             txtName.Text = FormMenu.valueForName;
@@ -100,6 +102,25 @@ namespace Mice_in_the_Hice
             smallmouse.drawSmallMouse(g);
             sparkles.drawSparkles(g);
 
+        }
+
+        private void lblPause_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRetry_Click(object sender, EventArgs e)
+        {
+            FormHouse retry = new FormHouse();
+            retry.Show();
+            this.Close();
+        }
+
+        private void lblMenu_Click(object sender, EventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+            this.Close();
         }
 
         private void tmrBigMouse_Tick(object sender, EventArgs e)
@@ -197,9 +218,37 @@ namespace Mice_in_the_Hice
             if (e.KeyData == Keys.Down) { down = true; }
             if (e.KeyData == Keys.Escape)
             {
-                FormMenu menu = new FormMenu();
-                this.Close();
-                menu.Show();
+                if (pause > 0)
+                {
+                    tmrMice.Enabled = false;
+                    tmrSparkles.Enabled = false;
+                    tmrAnim.Enabled = false;
+                    lblPause.Text = "PAUSED";
+                    pause -= 1;
+                    lblRetry.Text = "Retry";
+                    lblRetry.BackColor = Color.AntiqueWhite;
+                    lblMenu.Text = "Main Menu";
+                    lblMenu.BackColor = Color.AntiqueWhite;
+                    lblRetry.BorderStyle = BorderStyle.Fixed3D;
+                    lblMenu.BorderStyle = BorderStyle.Fixed3D;
+                    lblRetry.Cursor = Cursors.Hand;
+                    lblMenu.Cursor = Cursors.Hand;
+                } else
+                {
+                    pause += 1;
+                    tmrMice.Enabled = true;
+                    tmrSparkles.Enabled = true;
+                    tmrAnim.Enabled = true;
+                    lblPause.Text = "";
+                    lblRetry.Text = "";
+                    lblRetry.BackColor = Color.Transparent;
+                    lblMenu.Text = "";
+                    lblMenu.BackColor = Color.Transparent;
+                    lblRetry.BorderStyle = BorderStyle.None;
+                    lblMenu.BorderStyle = BorderStyle.None;
+                    lblRetry.Cursor = Cursors.Default;
+                    lblMenu.Cursor = Cursors.Default;
+                }
             }
         }
 
