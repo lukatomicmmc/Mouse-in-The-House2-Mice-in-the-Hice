@@ -130,6 +130,8 @@
             0,
             0});
             this.btnAge.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.btnAge.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAge_KeyDown);
+            this.btnAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnAge_KeyPress);
             // 
             // btnPlay
             // 

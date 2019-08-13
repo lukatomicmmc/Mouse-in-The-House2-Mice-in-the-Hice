@@ -96,5 +96,19 @@ namespace Mice_in_the_Hice
             lblScore.Text = FormHouse.finalscore.ToString();
             lblScoreLvl.Text = FormHouse.finalscorelvl.ToString();
         }
+
+        private void FormDeath_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void FormDeath_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.Close();
+                house.Show();
+            }
+        }
     }
 }

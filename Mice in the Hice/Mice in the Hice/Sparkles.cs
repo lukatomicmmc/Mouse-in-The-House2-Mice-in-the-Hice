@@ -78,10 +78,10 @@ namespace Mice_in_the_Hice
             }
             if (move == "down")
             {
-                if (sparklesRec.Location.Y > 470) // is spaceship close to right side
+                if (sparklesRec.Location.Y > 500) // is spaceship close to right side
                 {
 
-                    y = 470;
+                    y = 500;
                     sparklesRec.Location = new Point(x, y);
                 }
                 else
@@ -93,10 +93,10 @@ namespace Mice_in_the_Hice
             }
             if (move == "up")
             {
-                if (sparklesRec.Location.Y < 40) // is spaceship close to right side
+                if (sparklesRec.Location.Y < 0) // is spaceship close to right side
                 {
 
-                    y = 40;
+                    y = 0;
                     sparklesRec.Location = new Point(x, y);
                 }
                 else

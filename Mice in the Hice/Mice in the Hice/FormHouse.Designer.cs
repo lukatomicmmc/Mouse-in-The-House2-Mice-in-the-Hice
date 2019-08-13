@@ -51,7 +51,7 @@
             // 
             // pnlGame
             // 
-            this.pnlGame.BackColor = System.Drawing.Color.PapayaWhip;
+            this.pnlGame.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pnlGame.Location = new System.Drawing.Point(12, 116);
             this.pnlGame.Name = "pnlGame";
             this.pnlGame.Size = new System.Drawing.Size(960, 553);

@@ -201,6 +201,8 @@
             this.Name = "FormDeath";
             this.Text = "FormDeath";
             this.Load += new System.EventHandler(this.FormDeath_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDeath_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormDeath_KeyPress);
             this.pnlDog.ResumeLayout(false);
             this.ResumeLayout(false);
 

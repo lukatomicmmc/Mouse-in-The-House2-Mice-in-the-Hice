@@ -8,6 +8,7 @@ namespace Mice_in_the_Hice
 
         public static string valueForAge = "testAge";
         public static string valueForName = "testName";
+        FormHouse house = new FormHouse();
         public FormMenu()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace Mice_in_the_Hice
             valueForName = txtName.Text;
 
 
-        FormHouse house = new FormHouse();
+
             this.Close();
             house.Show();
         }
@@ -31,7 +32,7 @@ namespace Mice_in_the_Hice
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void t_Paint(object sender, PaintEventArgs e)
@@ -76,6 +77,19 @@ namespace Mice_in_the_Hice
                 e.Handled = true;
                 txtName.Focus();
             }
+        }
+
+        private void btnAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                house.Show();
+                this.Close();
+            }
+        }
+
+        private void btnAge_KeyDown(object sender, KeyEventArgs e)
+        {
         }
     }
 }

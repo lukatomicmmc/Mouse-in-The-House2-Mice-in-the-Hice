@@ -136,12 +136,12 @@ namespace Mice_in_the_Hice
                 if (bigmouse[i].bigmouseRec.Location.X > 1000)
                 {
                     score += 1;
-                    bigmouse[i].x = -20;
+                    bigmouse[i].x = -50;
                 }
                 if (sparkles.sparklesRec.IntersectsWith(bigmouse[i].bigmouseRec))
                 {
                     //reset bigmouse[i] back to left of panel
-                    bigmouse[i].x = -20; // set  x value of bigmouseRec
+                    bigmouse[i].x = -50; // set  x value of bigmouseRec
                     lives -= 1;// lose a life
                     lblLives.Text = lives.ToString();// display number of lives
                     checkLives();
