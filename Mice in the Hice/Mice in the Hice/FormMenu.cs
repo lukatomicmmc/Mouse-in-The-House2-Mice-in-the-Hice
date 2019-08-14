@@ -5,7 +5,8 @@ namespace Mice_in_the_Hice
 {
     public partial class FormMenu : Form
     {
-
+        public int mode;
+        int age;
         public static string valueForAge = "testAge";
         public static string valueForName = "testName";
         FormHouse house = new FormHouse();
@@ -16,11 +17,7 @@ namespace Mice_in_the_Hice
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            valueForAge = btnAge.Text;
-            valueForName = txtName.Text;
-
-
-
+            mode = 1;
             this.Close();
             house.Show();
         }
@@ -32,7 +29,7 @@ namespace Mice_in_the_Hice
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void t_Paint(object sender, PaintEventArgs e)
@@ -44,6 +41,7 @@ namespace Mice_in_the_Hice
         {
             System.Media.SoundPlayer music = new System.Media.SoundPlayer("music-looping-section.wav");
             music.PlayLooping();
+            txtName.Focus();
         }
 
         private void btnLore_Click(object sender, EventArgs e)
@@ -63,7 +61,7 @@ namespace Mice_in_the_Hice
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13) //alpabet, backspace key
+            if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13  || e.KeyChar == 32) //alpabet, backspace key
             {
                 if(e.KeyChar == 13)
                 {
@@ -90,6 +88,15 @@ namespace Mice_in_the_Hice
 
         private void btnAge_KeyDown(object sender, KeyEventArgs e)
         {
+        }
+
+        private void btnHard_Click(object sender, EventArgs e)
+        {
+            mode = 2;
+            FormHard hardmode = new FormHard();
+            this.Close();
+            hardmode.Show();
+
         }
     }
 }

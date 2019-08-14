@@ -53,6 +53,7 @@
             // 
             this.pnlGame.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pnlGame.Location = new System.Drawing.Point(12, 116);
+            this.pnlGame.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pnlGame.Name = "pnlGame";
             this.pnlGame.Size = new System.Drawing.Size(960, 553);
             this.pnlGame.TabIndex = 0;
@@ -79,6 +80,7 @@
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(1000, 148);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(213, 33);
             this.txtName.TabIndex = 10;
@@ -90,6 +92,7 @@
             this.lblScore.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblScore.Location = new System.Drawing.Point(1134, 471);
+            this.lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(79, 46);
             this.lblScore.TabIndex = 30;
@@ -103,6 +106,7 @@
             this.lblScoreLvl.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreLvl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblScoreLvl.Location = new System.Drawing.Point(1134, 404);
+            this.lblScoreLvl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoreLvl.Name = "lblScoreLvl";
             this.lblScoreLvl.Size = new System.Drawing.Size(79, 46);
             this.lblScoreLvl.TabIndex = 20;
@@ -116,6 +120,7 @@
             this.lblScoreName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblScoreName.Location = new System.Drawing.Point(1000, 471);
+            this.lblScoreName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoreName.Name = "lblScoreName";
             this.lblScoreName.Size = new System.Drawing.Size(94, 46);
             this.lblScoreName.TabIndex = 6;
@@ -129,6 +134,7 @@
             this.lblScoreLvlName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreLvlName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblScoreLvlName.Location = new System.Drawing.Point(1000, 404);
+            this.lblScoreLvlName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoreLvlName.Name = "lblScoreLvlName";
             this.lblScoreLvlName.Size = new System.Drawing.Size(94, 46);
             this.lblScoreLvlName.TabIndex = 5;
@@ -142,6 +148,7 @@
             this.lblLives.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLives.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblLives.Location = new System.Drawing.Point(1134, 324);
+            this.lblLives.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLives.Name = "lblLives";
             this.lblLives.Size = new System.Drawing.Size(79, 46);
             this.lblLives.TabIndex = 10;
@@ -155,6 +162,7 @@
             this.lblLivesName.Font = new System.Drawing.Font("Impact", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLivesName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblLivesName.Location = new System.Drawing.Point(1000, 324);
+            this.lblLivesName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLivesName.Name = "lblLivesName";
             this.lblLivesName.Size = new System.Drawing.Size(94, 46);
             this.lblLivesName.TabIndex = 1;
@@ -177,7 +185,8 @@
             this.txtAge.BackColor = System.Drawing.Color.White;
             this.txtAge.Enabled = false;
             this.txtAge.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(1113, 199);
+            this.txtAge.Location = new System.Drawing.Point(1112, 199);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(100, 33);
             this.txtAge.TabIndex = 33;
@@ -188,6 +197,7 @@
             this.txtAgeName.Enabled = false;
             this.txtAgeName.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgeName.Location = new System.Drawing.Point(1000, 199);
+            this.txtAgeName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAgeName.Name = "txtAgeName";
             this.txtAgeName.Size = new System.Drawing.Size(100, 33);
             this.txtAgeName.TabIndex = 34;
@@ -199,6 +209,7 @@
             this.lblPause.Font = new System.Drawing.Font("Impact", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPause.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblPause.Location = new System.Drawing.Point(12, -8);
+            this.lblPause.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPause.Name = "lblPause";
             this.lblPause.Size = new System.Drawing.Size(359, 105);
             this.lblPause.TabIndex = 35;
@@ -210,6 +221,7 @@
             this.lblRetry.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRetry.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblRetry.Location = new System.Drawing.Point(422, 9);
+            this.lblRetry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRetry.Name = "lblRetry";
             this.lblRetry.Size = new System.Drawing.Size(166, 36);
             this.lblRetry.TabIndex = 36;
@@ -221,6 +233,7 @@
             this.lblMenu.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblMenu.Location = new System.Drawing.Point(422, 65);
+            this.lblMenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(166, 36);
             this.lblMenu.TabIndex = 37;
@@ -247,10 +260,12 @@
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.lblLivesName);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormHouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Fast, the mice are coming!";
             this.Load += new System.EventHandler(this.FormHouse_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHouse_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormHouse_KeyUp);

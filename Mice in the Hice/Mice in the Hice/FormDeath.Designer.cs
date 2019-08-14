@@ -199,7 +199,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.pnlDog);
             this.Name = "FormDeath";
-            this.Text = "FormDeath";
+            this.Text = "F";
             this.Load += new System.EventHandler(this.FormDeath_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormDeath_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormDeath_KeyPress);
