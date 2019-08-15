@@ -50,6 +50,7 @@
             this.pnlGamed.Name = "pnlGamed";
             this.pnlGamed.Size = new System.Drawing.Size(960, 553);
             this.pnlGamed.TabIndex = 0;
+            this.pnlGamed.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGamed_Paint_1);
             // 
             // lblPaused
             // 
@@ -68,6 +69,7 @@
             this.lblRetried.Name = "lblRetried";
             this.lblRetried.Size = new System.Drawing.Size(166, 36);
             this.lblRetried.TabIndex = 2;
+            this.lblRetried.Click += new System.EventHandler(this.lblRetried_Click_1);
             // 
             // lblMenud
             // 
@@ -77,6 +79,7 @@
             this.lblMenud.Name = "lblMenud";
             this.lblMenud.Size = new System.Drawing.Size(166, 36);
             this.lblMenud.TabIndex = 3;
+            this.lblMenud.Click += new System.EventHandler(this.lblMenud_Click_1);
             // 
             // txtNamed
             // 
@@ -140,7 +143,18 @@
             // 
             // tmrMiced
             // 
+            this.tmrMiced.Enabled = true;
             this.tmrMiced.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tmrSparkled
+            // 
+            this.tmrSparkled.Enabled = true;
+            this.tmrSparkled.Tick += new System.EventHandler(this.tmrSparkled_Tick_1);
+            // 
+            // tmrAnimed
+            // 
+            this.tmrAnimed.Enabled = true;
+            this.tmrAnimed.Tick += new System.EventHandler(this.tmrAnimed_Tick);
             // 
             // FormHard
             // 
@@ -157,6 +171,9 @@
             this.Controls.Add(this.pnlGamed);
             this.Name = "FormHard";
             this.Text = "Welcome to cat hell!";
+            this.Load += new System.EventHandler(this.FormHard_Load_2);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHard_KeyDown_1);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormHard_KeyUp_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

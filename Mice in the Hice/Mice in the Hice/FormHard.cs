@@ -22,9 +22,7 @@ namespace Mice_in_the_Hice
         Random xspeed = new Random();
         bool left, right, up, down;
         string move;
-        public static int finalscore;
-        public static int finalscorelvl;
-        public int score, speed;
+        public int score, lives;
         int x, y;
         //images array for animating
         Image[] images = new Image[15];
@@ -36,7 +34,7 @@ namespace Mice_in_the_Hice
         public FormHard()
         {
             InitializeComponent();
-            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlGame, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlGamed, new object[] { true });
             for (int i = 0; i < 6; i++)
             {
                 int y = 0 + (i * 100);
@@ -51,11 +49,11 @@ namespace Mice_in_the_Hice
         {
             if (lives == 0)
             {
-                finalscore = score;
-                finalscorelvl = scorelvl;
-                tmrMice.Enabled = false;
-                tmrSparkles.Enabled = false;
-                tmrAnim.Enabled = false;
+                FormMenu.finalscore = score;
+                FormMenu.finalscore = 1;
+                tmrMiced.Enabled = false;
+                tmrSparkled.Enabled = false;
+                tmrAnimed.Enabled = false;
                 FormDeath death = new FormDeath();
                 this.Close();
                 death.Show();
@@ -65,11 +63,7 @@ namespace Mice_in_the_Hice
 
         private void FormHard_Load(object sender, EventArgs e)
         {
-            pause = 1;
-            death = 0;
-
-            txtName.Text = FormMenu.valueForName;
-            txtAge.Text = FormMenu.valueForAge;
+            
 
         }
 
@@ -80,45 +74,25 @@ namespace Mice_in_the_Hice
 
 
         }
-        private void pnlGame_Paint(object sender, PaintEventArgs e)
+        private void pnlGamed_Paint(object sender, PaintEventArgs e)
         {
-            //get the graphics used to paint on the panel control
-            g = e.Graphics;
-            rug.drawRug(g);
-            for (int i = 0; i < 6; i++)
-            {
-                // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = xspeed.Next(5, 25);
-                speed = rndmspeed + 2 * scorelvl;
-                bigmouse[i].x += speed;
-
-                //call the BigMouse class's drawBigMouse method to draw the images
-                bigmouse[i].drawBigMouse(g);
-            }
-            sparkles.drawSparkles(g);
-            //call the SmallMouse class's DrawSmallMouse method to draw the image smallmouse1 
-            smallmouse.drawSmallMouse(g);
-            sparkles.drawSparkles(g);
+            
 
         }
 
-        private void lblPause_Click(object sender, EventArgs e)
+        private void lblPaused_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblRetry_Click(object sender, EventArgs e)
+        private void lblRetried_Click(object sender, EventArgs e)
         {
-            FormHard retry = new FormHard();
-            retry.Show();
-            this.Close();
+
         }
 
-        private void lblMenu_Click(object sender, EventArgs e)
+        private void lblMenud_Click(object sender, EventArgs e)
         {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-            this.Close();
+
         }
 
         private void FormHard_Load_1(object sender, EventArgs e)
@@ -127,16 +101,6 @@ namespace Mice_in_the_Hice
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tmrBigMouse_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tmrMice_Tick(object sender, EventArgs e)
         {
             for (int i = 0; i < 6; i++)
             {
@@ -151,7 +115,6 @@ namespace Mice_in_the_Hice
                     //reset bigmouse[i] back to left of panel
                     bigmouse[i].x = -50; // set  x value of bigmouseRec
                     lives -= 1;// lose a life
-                    lblLives.Text = lives.ToString();// display number of lives
                     checkLives();
                 }
 
@@ -174,51 +137,27 @@ namespace Mice_in_the_Hice
                 smallmouse.y = ydistance.Next(50, 450);
                 checkLives();
             }
-            pnlGame.Invalidate();//makes the paint event fire to redraw the panel
-            lblLives.Text = lives.ToString();
-            if (score > scorelvl * scorelvl)
-            {
-                scorelvl += 1;
-                lives += 1;
-            }
-            lblScoreLvl.Text = scorelvl.ToString();
+            pnlGamed.Invalidate();//makes the paint event fire to redraw the panel
             smallmouse.moveSmallMouse();
-            lblScore.Text = score.ToString();// display score
-            pnlGame.Invalidate();//makes the paint event fire to redraw the panel
+            lblScored.Text = score.ToString();// display score
+            pnlGamed.Invalidate();//makes the paint event fire to redraw the panel
         }
 
-        private void tmrSparkles_Tick(object sender, EventArgs e)
-        {
-            if (right) // if right arrow key pressed
-            {
-                move = "right";
-                sparkles.moveSparkles(move);
-            }
-            if (left) // if left arrow key pressed
-            {
-                move = "left";
-                sparkles.moveSparkles(move);
-            }
-
-            if (up) // if right arrow key pressed
-            {
-                move = "up";
-                sparkles.moveSparkles(move);
-            }
-            if (down) // if left arrow key pressed
-            {
-                move = "down";
-                sparkles.moveSparkles(move);
-            }
-
-        }
-
-        private void tmrSmallMouse_Tick(object sender, EventArgs e)
+        private void tmrBigMouse_Tick(object sender, EventArgs e)
         {
             
         }
 
-        private void FormHard_KeyDown(object sender, KeyEventArgs e)
+        private void FormHard_Load_2(object sender, EventArgs e)
+        {
+            pause = 1;
+            death = 0;
+            lives = 2;
+            txtNamed.Text = FormMenu.valueForName;
+            txtAged.Text = FormMenu.valueForAge;
+        }
+
+        private void FormHard_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
@@ -241,7 +180,8 @@ namespace Mice_in_the_Hice
                     lblMenud.BorderStyle = BorderStyle.Fixed3D;
                     lblRetried.Cursor = Cursors.Hand;
                     lblMenud.Cursor = Cursors.Hand;
-                } else
+                }
+                else
                 {
                     pause += 1;
                     tmrMiced.Enabled = true;
@@ -260,12 +200,102 @@ namespace Mice_in_the_Hice
             }
         }
 
-        private void FormHard_KeyUp(object sender, KeyEventArgs e)
+        private void FormHard_KeyUp_1(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }
             if (e.KeyData == Keys.Up) { up = false; }
             if (e.KeyData == Keys.Down) { down = false; }
+        }
+
+        private void pnlGamed_Paint_1(object sender, PaintEventArgs e)
+        {
+            //get the graphics used to paint on the panel control
+            g = e.Graphics;
+            rug.drawRug(g);
+            for (int i = 0; i < 6; i++)
+            {
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = xspeed.Next(30, 50);
+                bigmouse[i].x += rndmspeed;
+
+                //call the BigMouse class's drawBigMouse method to draw the images
+                bigmouse[i].drawBigMouse(g);
+            }
+            sparkles.drawSparkles(g);
+            //call the SmallMouse class's DrawSmallMouse method to draw the image smallmouse1 
+            smallmouse.drawSmallMouse(g);
+            sparkles.drawSparkles(g);
+        }
+
+        private void tmrSparkled_Tick_1(object sender, EventArgs e)
+        {
+            if (right) // if right arrow key pressed
+            {
+                move = "right";
+                sparkles.moveSparkles(move);
+            }
+            if (left) // if left arrow key pressed
+            {
+                move = "left";
+                sparkles.moveSparkles(move);
+            }
+
+            if (up) // if right arrow key pressed
+            {
+                move = "up";
+                sparkles.moveSparkles(move);
+            }
+            if (down) // if left arrow key pressed
+            {
+                move = "down";
+                sparkles.moveSparkles(move);
+            }
+        }
+
+        private void tmrAnimed_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRetried_Click_1(object sender, EventArgs e)
+        {
+            FormHard retry = new FormHard();
+            retry.Show();
+            this.Close();
+        }
+
+        private void lblMenud_Click_1(object sender, EventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void tmrMiced_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tmrSparkled_Tick(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void tmrSmallMouse_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FormHard_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void FormHard_KeyUp(object sender, KeyEventArgs e)
+        {
+
 
         }
     }

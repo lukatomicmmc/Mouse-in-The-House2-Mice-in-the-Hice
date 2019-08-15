@@ -5,6 +5,8 @@ namespace Mice_in_the_Hice
 {
     public partial class FormMenu : Form
     {
+        public static int finalscore;
+        public static int finalscorelvl;
         public int mode;
         int age;
         public static string valueForAge = "testAge";
@@ -13,6 +15,8 @@ namespace Mice_in_the_Hice
         public FormMenu()
         {
             InitializeComponent();
+            valueForName = txtName.Text;
+            valueForAge = btnAge.Text;
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -81,6 +85,7 @@ namespace Mice_in_the_Hice
         {
             if (e.KeyChar == 13)
             {
+                mode = 1;
                 house.Show();
                 this.Close();
             }

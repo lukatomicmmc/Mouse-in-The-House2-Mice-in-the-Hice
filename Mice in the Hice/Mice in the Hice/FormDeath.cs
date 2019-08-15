@@ -93,8 +93,8 @@ namespace Mice_in_the_Hice
         {
             lblName.Text = FormMenu.valueForName;
             lblAge.Text = FormMenu.valueForAge;
-            lblScore.Text = FormHouse.finalscore.ToString();
-            lblScoreLvl.Text = FormHouse.finalscorelvl.ToString();
+            lblScore.Text = FormMenu.finalscore.ToString();
+            lblScoreLvl.Text = FormMenu.finalscorelvl.ToString();
         }
 
         private void FormDeath_KeyPress(object sender, KeyPressEventArgs e)
