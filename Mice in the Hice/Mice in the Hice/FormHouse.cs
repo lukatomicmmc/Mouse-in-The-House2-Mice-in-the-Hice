@@ -30,7 +30,8 @@ namespace Mice_in_the_Hice
         Animation animate;
         int death;
         int pause;
-
+        public static int finalscore;
+        public static int finalscorelvl;
 
         public FormHouse()
         {
@@ -50,8 +51,8 @@ namespace Mice_in_the_Hice
         {
             if (lives == 0)
             {
-                FormMenu.finalscore = score;
-                FormMenu.finalscorelvl = scorelvl;
+                finalscore = score;
+                finalscorelvl = scorelvl;
                 tmrMice.Enabled = false;
                 tmrSparkles.Enabled = false;
                 tmrAnim.Enabled = false;

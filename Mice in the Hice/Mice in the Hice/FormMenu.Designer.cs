@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.t = new System.Windows.Forms.Panel();
-            this.btnHard = new System.Windows.Forms.Button();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             // t
             // 
             this.t.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("t.BackgroundImage")));
-            this.t.Controls.Add(this.btnHard);
             this.t.Controls.Add(this.lblAge);
             this.t.Controls.Add(this.lblName);
             this.t.Controls.Add(this.label1);
@@ -65,28 +63,12 @@
             this.t.TabIndex = 0;
             this.t.Paint += new System.Windows.Forms.PaintEventHandler(this.t_Paint);
             // 
-            // btnHard
-            // 
-            this.btnHard.BackColor = System.Drawing.Color.Transparent;
-            this.btnHard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHard.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHard.ForeColor = System.Drawing.Color.Maroon;
-            this.btnHard.Image = ((System.Drawing.Image)(resources.GetObject("btnHard.Image")));
-            this.btnHard.Location = new System.Drawing.Point(695, 444);
-            this.btnHard.Name = "btnHard";
-            this.btnHard.Size = new System.Drawing.Size(346, 57);
-            this.btnHard.TabIndex = 12;
-            this.btnHard.Text = "HARD MODE";
-            this.btnHard.UseVisualStyleBackColor = false;
-            this.btnHard.Click += new System.EventHandler(this.btnHard_Click);
-            // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.BackColor = System.Drawing.Color.Transparent;
             this.lblAge.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(946, 304);
+            this.lblAge.Location = new System.Drawing.Point(946, 317);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(39, 23);
             this.lblAge.TabIndex = 11;
@@ -97,7 +79,7 @@
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(691, 304);
+            this.lblName.Location = new System.Drawing.Point(691, 317);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(55, 23);
             this.lblName.TabIndex = 10;
@@ -116,7 +98,7 @@
             // 
             this.txtName.BackColor = System.Drawing.Color.PeachPuff;
             this.txtName.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(695, 330);
+            this.txtName.Location = new System.Drawing.Point(695, 343);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(249, 33);
             this.txtName.TabIndex = 8;
@@ -128,7 +110,7 @@
             // 
             this.btnAge.BackColor = System.Drawing.Color.PeachPuff;
             this.btnAge.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAge.Location = new System.Drawing.Point(950, 330);
+            this.btnAge.Location = new System.Drawing.Point(950, 343);
             this.btnAge.Maximum = new decimal(new int[] {
             123,
             0,
@@ -158,7 +140,7 @@
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
-            this.btnPlay.Location = new System.Drawing.Point(695, 377);
+            this.btnPlay.Location = new System.Drawing.Point(695, 397);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(346, 57);
             this.btnPlay.TabIndex = 6;
@@ -173,7 +155,7 @@
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(695, 511);
+            this.btnHelp.Location = new System.Drawing.Point(695, 470);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(346, 57);
             this.btnHelp.TabIndex = 5;
@@ -188,7 +170,7 @@
             this.btnLore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLore.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLore.Image = ((System.Drawing.Image)(resources.GetObject("btnLore.Image")));
-            this.btnLore.Location = new System.Drawing.Point(695, 577);
+            this.btnLore.Location = new System.Drawing.Point(695, 546);
             this.btnLore.Name = "btnLore";
             this.btnLore.Size = new System.Drawing.Size(346, 57);
             this.btnLore.TabIndex = 4;
@@ -203,7 +185,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(695, 644);
+            this.btnExit.Location = new System.Drawing.Point(695, 619);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(346, 57);
             this.btnExit.TabIndex = 3;
@@ -250,6 +232,5 @@
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnHard;
     }
 }

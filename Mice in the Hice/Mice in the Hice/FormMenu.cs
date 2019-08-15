@@ -5,23 +5,19 @@ namespace Mice_in_the_Hice
 {
     public partial class FormMenu : Form
     {
-        public static int finalscore;
-        public static int finalscorelvl;
-        public int mode;
-        int age;
         public static string valueForAge = "testAge";
         public static string valueForName = "testName";
         FormHouse house = new FormHouse();
         public FormMenu()
         {
             InitializeComponent();
-            valueForName = txtName.Text;
-            valueForAge = btnAge.Text;
+
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            mode = 1;
+            valueForName = txtName.Text;
+            valueForAge = btnAge.Text;
             this.Close();
             house.Show();
         }
@@ -85,7 +81,6 @@ namespace Mice_in_the_Hice
         {
             if (e.KeyChar == 13)
             {
-                mode = 1;
                 house.Show();
                 this.Close();
             }
@@ -97,10 +92,6 @@ namespace Mice_in_the_Hice
 
         private void btnHard_Click(object sender, EventArgs e)
         {
-            mode = 2;
-            FormHard hardmode = new FormHard();
-            this.Close();
-            hardmode.Show();
 
         }
     }

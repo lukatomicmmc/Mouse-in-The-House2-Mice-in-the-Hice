@@ -53,12 +53,6 @@
     <Compile Include="FormDeath.Designer.cs">
       <DependentUpon>FormDeath.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHard.Designer.cs">
-      <DependentUpon>FormHard.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormHouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,9 +77,6 @@
     <Compile Include="Sparkles.cs" />
     <EmbeddedResource Include="FormDeath.resx">
       <DependentUpon>FormDeath.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHard.resx">
-      <DependentUpon>FormHard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHouse.resx">
       <DependentUpon>FormHouse.cs</DependentUpon>
