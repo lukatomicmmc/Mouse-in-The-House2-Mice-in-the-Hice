@@ -90,7 +90,7 @@ namespace Mice_in_the_Hice
             {
                 // generate a random number from 5 to 20 and put it in rndmspeed
                 int rndmspeed = xspeed.Next(5, 25);
-                speed = rndmspeed + 2 * scorelvl;
+                speed = rndmspeed + 3 * scorelvl;
                 bigmouse[i].x += speed;
 
                 //call the BigMouse class's drawBigMouse method to draw the images
