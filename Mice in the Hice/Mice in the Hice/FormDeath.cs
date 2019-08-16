@@ -70,7 +70,7 @@ namespace Mice_in_the_Hice
                 }
                 if (text > 10)
                 {
-                    lblDead.Text = FormMenu.valueForName + " F.";
+                    lblDead.Text = "F";
                 }
                 if (text > 11)
                 {
